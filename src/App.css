@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Space Mono', 'Courier New', monospace;
+  padding: 40px 20px;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.receipt-wrapper {
+  width: 380px;
+  position: relative;
+}
+
+.receipt {
+  background: #fff;
+  padding: 30px 25px 20px;
+  color: #000;
+  width: 100%;
+}
+
+.receipt-header {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.receipt-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.receipt-subtitle {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 4px;
+  opacity: 0.6;
+}
+
+.receipt-divider {
+  text-align: center;
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+  color: #999;
+  margin: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.receipt-section {
+  margin: 4px 0;
+}
+
+.receipt-section-title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+
+.receipt-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+}
+
+.receipt-table thead th {
+  text-align: left;
+  font-size: 0.6rem;
+  font-weight: 400;
+  opacity: 0.5;
+  padding: 4px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.receipt-table .col-num {
+  width: 30px;
+}
+
+.receipt-table .col-name {
+  text-align: left;
+}
+
+.receipt-table .col-year {
+  width: 50px;
+  text-align: right;
+}
+
+.receipt-row {
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.receipt-row td {
+  padding: 8px 0;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.5px;
+}
+
+.receipt-row:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.receipt-row:hover td {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.receipt-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 6px 0 2px;
+  text-transform: uppercase;
+}
+
+.receipt-footer {
+  text-align: center;
+}
+
+.footer-line {
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  margin: 3px 0;
+  opacity: 0.7;
+}
+
+.receipt-thankyou {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin: 6px 0;
+}
+
+.receipt-barcode {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-top: 8px;
+  opacity: 0.5;
+  line-height: 1;
+}
+
+.receipt-torn-edge {
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(135deg, #fff 33.33%, transparent 33.33%) 0 0,
+              linear-gradient(225deg, #fff 33.33%, transparent 33.33%) 0 0;
+  background-size: 12px 20px;
+  background-repeat: repeat-x;
+  background-position: left bottom;
+}
