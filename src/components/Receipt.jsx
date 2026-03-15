@@ -14,6 +14,10 @@ function Receipt() {
             <p>FOR YOU</p>
             <p>{new Date().toLocaleString("en-US", { month: "short", day: "numeric", year: "numeric" })}, {new Date().toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hour12: true })}</p>
           </div>
+          <div className="receipt-customer-note">
+            <p>CUSTOMER NOTE:</p>
+            <p>I CRAFT EXPERIENCES THAT MAKE HEALTHCARE & INSURANCE SIMPLER FOR PEOPLE. CURRENTLY AT PLUM.</p>
+          </div>
           <div className="receipt-divider"></div>
         </header>
 
