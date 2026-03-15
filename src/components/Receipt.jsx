@@ -8,6 +8,11 @@ function Receipt() {
         <header className="receipt-header">
           <h1 className="receipt-name">Noirrit Chaki</h1>
           <p className="receipt-subtitle">Product Designer at Plum</p>
+          <div className="receipt-order-info">
+            <p>ORDER #001</p>
+            <p>FOR YOU</p>
+            <p>{new Date().toLocaleString("en-US", { month: "short", day: "numeric", year: "numeric" })}, {new Date().toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hour12: true })}</p>
+          </div>
           <div className="receipt-divider"></div>
         </header>
 
