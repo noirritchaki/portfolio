@@ -57,7 +57,7 @@ function Receipt() {
             </thead>
             <tbody>
               {presentations.map((item, index) => (
-                <tr key={index} className="receipt-row">
+                <tr key={index} className="receipt-row" onClick={() => window.open(item.url, "_blank")}>
                   <td className="col-num">{String(index + 1).padStart(2, "0")}</td>
                   <td className="col-name">
                     {item.name.split(" ").slice(0, -1).join(" ")}{" "}
