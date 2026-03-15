@@ -146,6 +146,10 @@ body {
   margin-left: 4px;
 }
 
+.col-name .icon-wrap {
+  white-space: nowrap;
+}
+
 .receipt-row:hover {
   background-color: #000;
   color: #fff;
