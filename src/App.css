@@ -69,10 +69,10 @@ body {
 }
 
 .receipt-subtitle {
-  font-size: 0.8rem;
+  font-size: 14px;
   text-transform: uppercase;
   margin-top: 4px;
-  opacity: 0.6;
+  color: #000;
   margin-bottom: 4px;
 }
 
@@ -274,11 +274,21 @@ body {
 }
 
 @keyframes displace {
-  0% { filter: url(#displacementFilter1); }
-  25% { filter: url(#displacementFilter2); }
-  50% { filter: url(#displacementFilter3); }
-  75% { filter: url(#displacementFilter4); }
-  100% { filter: url(#displacementFilter5); }
+  0% {
+    filter: url(#displacementFilter1);
+  }
+  25% {
+    filter: url(#displacementFilter2);
+  }
+  50% {
+    filter: url(#displacementFilter3);
+  }
+  75% {
+    filter: url(#displacementFilter4);
+  }
+  100% {
+    filter: url(#displacementFilter5);
+  }
 }
 
 .displace {
