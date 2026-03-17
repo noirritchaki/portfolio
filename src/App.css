@@ -196,10 +196,39 @@ body {
   opacity: 0.7;
 }
 
+.footer-socials {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.footer-social-link {
+  color: #000;
+  text-decoration: none;
+  padding: 4px 6px;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+}
+
+.footer-social-link:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.receipt-stars {
+  font-size: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .receipt-thankyou {
-  font-size: 0.8rem;
-  font-weight: 700;
+  font-size: 40px;
+  font-weight: 600;
   margin: 6px 0;
+  line-height: 40px;
+  letter-spacing: -2px;
 }
 
 .receipt-barcode {
