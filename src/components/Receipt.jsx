@@ -7,7 +7,7 @@ function Receipt() {
       <div className="receipt-torn-edge receipt-torn-edge-top"></div>
       <div className="receipt">
         <header className="receipt-header">
-          <img src={nameImg} alt="Noirrit Chaki" className="receipt-name" />
+          <a href="/" className="receipt-name-link"><img src={nameImg} alt="Noirrit Chaki" className="receipt-name" /></a>
           <p className="receipt-subtitle">Product Designer at Plum</p>
           <div className="receipt-order-info">
             <p>ORDER #001</p>

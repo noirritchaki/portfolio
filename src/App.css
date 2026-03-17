@@ -44,7 +44,7 @@ body {
 .receipt-order-info {
   text-align: left;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 18px;
   text-transform: uppercase;
   margin-top: 32px;
 }
@@ -53,14 +53,23 @@ body {
   margin: 0;
 }
 
+.receipt-name-link {
+  display: block;
+}
+
 .receipt-name {
   width: 100%;
   height: auto;
   display: block;
+  transition: transform 0.2s ease;
+}
+
+.receipt-name:hover {
+  transform: scale(1.02);
 }
 
 .receipt-subtitle {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   margin-top: 4px;
   opacity: 0.6;
@@ -70,7 +79,7 @@ body {
 .receipt-customer-note {
   text-align: left;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 18px;
   text-transform: uppercase;
   margin-top: 24px;
   margin-bottom: 16px;
