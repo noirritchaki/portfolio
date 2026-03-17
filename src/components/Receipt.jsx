@@ -81,6 +81,50 @@ function Receipt() {
 
         <div className="receipt-divider"></div>
 
+        <section className="receipt-section">
+          <table className="receipt-table">
+            <thead>
+              <tr>
+                <th className="col-num">#</th>
+                <th className="col-name">A BIT MORE</th>
+                <th className="col-year">QTY</th>
+              </tr>
+              <tr className="receipt-divider-row">
+                <td colSpan="3"><div className="receipt-divider"></div></td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="receipt-row">
+                <td className="col-num">01</td>
+                <td className="col-name">ROCK CLIMBING.<br />EQUAL PARTS THRILL AND BRUISES.<br />WORTH IT EVERY TIME.</td>
+                <td className="col-year">42</td>
+              </tr>
+              <tr className="receipt-row">
+                <td className="col-num">02</td>
+                <td className="col-name">SURFING.<br />TRIED IT. LOVED IT.</td>
+                <td className="col-year">7</td>
+              </tr>
+              <tr className="receipt-row">
+                <td className="col-num">03</td>
+                <td className="col-name">COFFEE BREWING.<br />BREWING (AND DRINKING) WAY TOO MUCH.<br />NO PLANS TO STOP.</td>
+                <td className="col-year">365</td>
+              </tr>
+              <tr className="receipt-row">
+                <td className="col-num">04</td>
+                <td className="col-name">TRYING MUSIC PRODUCTION.<br />MAKING BEATS BETWEEN DESIGN SPRINTS.</td>
+                <td className="col-year">12</td>
+              </tr>
+              <tr className="receipt-row">
+                <td className="col-num">05</td>
+                <td className="col-name">VIDEOS.<br />CREATING A BUNCH OF THEM.</td>
+                <td className="col-year">23</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <div className="receipt-divider"></div>
+
         <footer className="receipt-footer">
           <p className="footer-line">github.com/noirritchaki</p>
           <p className="footer-line">linkedin.com/in/noirritchaki</p>
