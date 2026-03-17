@@ -73,7 +73,27 @@ body {
   text-transform: uppercase;
   margin-top: 4px;
   opacity: 0.6;
+  margin-bottom: 4px;
+}
+
+.receipt-email {
+  font-size: 12px;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  padding-bottom: 1px;
+  transition: background-position 0.2s ease;
+  margin-top: 20px;
   margin-bottom: 32px;
+}
+
+.receipt-email:hover {
+  background-position: 0 calc(100% + 3px);
 }
 
 .receipt-customer-note {
@@ -251,4 +271,22 @@ body {
 
 .receipt-torn-edge-top {
   transform: rotate(180deg);
+}
+
+@keyframes displace {
+  0% { filter: url(#displacementFilter1); }
+  25% { filter: url(#displacementFilter2); }
+  50% { filter: url(#displacementFilter3); }
+  75% { filter: url(#displacementFilter4); }
+  100% { filter: url(#displacementFilter5); }
+}
+
+.displace {
+  animation: displace 0.5s infinite;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .displace {
+    animation: none;
+  }
 }

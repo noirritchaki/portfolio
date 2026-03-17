@@ -3,7 +3,29 @@ import nameImg from "../../assets/name.webp";
 
 function Receipt() {
   return (
-    <div className="receipt-wrapper">
+    <div className="receipt-wrapper displace">
+      <svg style={{ position: 'absolute', width: 0, height: 0 }}>
+        <filter id="displacementFilter1" x="-50%" y="-50%" width="200%" height="200%">
+          <feTurbulence type="turbulence" baseFrequency="0.03" numOctaves="3" seed="1" result="turbulence" />
+          <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="2" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+        <filter id="displacementFilter2" x="-50%" y="-50%" width="200%" height="200%">
+          <feTurbulence type="turbulence" baseFrequency="0.03" numOctaves="3" seed="2" result="turbulence" />
+          <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="2" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+        <filter id="displacementFilter3" x="-50%" y="-50%" width="200%" height="200%">
+          <feTurbulence type="turbulence" baseFrequency="0.03" numOctaves="3" seed="3" result="turbulence" />
+          <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="2" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+        <filter id="displacementFilter4" x="-50%" y="-50%" width="200%" height="200%">
+          <feTurbulence type="turbulence" baseFrequency="0.03" numOctaves="3" seed="4" result="turbulence" />
+          <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="2" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+        <filter id="displacementFilter5" x="-50%" y="-50%" width="200%" height="200%">
+          <feTurbulence type="turbulence" baseFrequency="0.03" numOctaves="3" seed="5" result="turbulence" />
+          <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="2" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+      </svg>
       <div className="receipt-torn-edge receipt-torn-edge-top"></div>
       <div className="receipt">
         <header className="receipt-header">
