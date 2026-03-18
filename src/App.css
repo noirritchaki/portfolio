@@ -297,9 +297,3 @@ body {
 .displace {
   animation: displace 0.5s infinite;
 }
-
-@media (hover: none) and (pointer: coarse) {
-  .displace {
-    animation: none;
-  }
-}
