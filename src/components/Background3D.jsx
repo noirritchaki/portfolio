@@ -111,19 +111,26 @@ export default function Background3D() {
           const y = row * lineHeight;
 
           // Scale for noise sampling — lower = bigger clusters
-          const nx = col * 0.05;
-          const ny = row * 0.05;
+          const nx = col * 0.035;
+          const ny = row * 0.035;
 
           // Fractal noise with time offset for animation
           const n1 = fractalNoise(nx + time, ny + time * 0.7, 4);
           const n2 = fractalNoise(nx * 0.6 - time * 0.5, ny * 0.6 + time * 0.3, 3);
           const n3 = fractalNoise(nx * 1.2 + time * 0.2, ny * 1.2 - time * 0.4, 2);
 
-          // Combine noise layers
+          // Combine noise layers for main blobs
           let value = n1 * 0.5 + n2 * 0.3 + n3 * 0.2;
 
           // Stronger contrast — creates dense clusters with empty gaps
           value = Math.pow(value, 1.8);
+
+          // Base layer — smaller-scale noise that always provides some texture
+          const base = fractalNoise(col * 0.15 + time * 0.4, row * 0.15 - time * 0.2, 2);
+          const baseValue = Math.pow(base, 2.5) * 0.35;
+
+          // Combine: main blobs dominate, base fills the gaps
+          value = Math.max(value, baseValue);
           value = Math.max(0, Math.min(1, value));
 
           // Map to ASCII character
