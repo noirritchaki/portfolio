@@ -74,11 +74,14 @@ export default function DotMatrixImage({ src, alt }) {
   }, [src]);
 
   return (
-    <canvas
-      ref={canvasRef}
-      aria-label={alt}
-      role="img"
-      style={{ width: "100%", height: "100%", display: "block" }}
-    />
+    <div className="dot-matrix-wrapper">
+      <img src={src} alt={alt} className="dot-matrix-original" />
+      <canvas
+        ref={canvasRef}
+        aria-label={alt}
+        role="img"
+        className="dot-matrix-canvas"
+      />
+    </div>
   );
 }

@@ -16,11 +16,17 @@ import climbSlab from "../../assets/slab copy.png";
 import climbSloper from "../../assets/sloper copy.png";
 import climbYellowDyno from "../../assets/yellow-dyno copy.png";
 import climbYellowRanger from "../../assets/yellow-ranger copy.png";
+import climb0961 from "../../assets/IMG_0961 copy.jpg";
+import climb0962 from "../../assets/IMG_0962 copy.jpg";
+import climb0963 from "../../assets/IMG_0963 copy.jpg";
+import climb0965 from "../../assets/IMG_0965 copy.jpg";
+import climb0967 from "../../assets/IMG_0967 copy.jpg";
 
 const climbingImages = [
   climbBatHang, climbBigPinch, climbBumpIt, climbDepression,
   climbDynoThunder, climbEasyPeasy, climbPink, climbRedFrog,
   climbSketchy, climbSlab, climbSloper, climbYellowDyno, climbYellowRanger,
+  climb0961, climb0962, climb0963, climb0965, climb0967,
 ];
 
 function Receipt() {
