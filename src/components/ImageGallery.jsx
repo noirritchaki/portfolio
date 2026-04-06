@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import DotMatrixImage from "./DotMatrixImage";
 
 export default function ImageGallery({ images, isOpen, onClose }) {
   useEffect(() => {
@@ -33,7 +34,7 @@ export default function ImageGallery({ images, isOpen, onClose }) {
         </button>
         <div className="gallery-grid">
           {images.map((src, i) => (
-            <img key={i} src={src} alt={`Climbing photo ${i + 1}`} loading="lazy" />
+            <DotMatrixImage key={i} src={src} alt={`Climbing photo ${i + 1}`} />
           ))}
         </div>
       </div>
