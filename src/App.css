@@ -298,3 +298,67 @@ body {
 .displace {
   animation: displace 0.5s infinite;
 }
+
+/* Image Gallery Modal */
+.gallery-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.gallery-overlay::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-modal {
+  max-width: 900px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.gallery-close {
+  position: absolute;
+  top: -36px;
+  right: 0;
+  background: none;
+  border: none;
+  color: #fff;
+  font-family: "Space Mono", "Courier New", monospace;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 8px;
+  text-transform: uppercase;
+  transition: all 0.15s ease;
+}
+
+.gallery-close:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 500px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

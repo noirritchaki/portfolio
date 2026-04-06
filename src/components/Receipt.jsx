@@ -1,8 +1,32 @@
+import { useState } from "react";
 import { projects, presentations } from "../data/projects";
 import nameImg from "../../assets/name.webp";
+import ImageGallery from "./ImageGallery";
+
+import climbBatHang from "../../assets/bat-hang copy.png";
+import climbBigPinch from "../../assets/big-pinch copy.png";
+import climbBumpIt from "../../assets/bump-it copy.png";
+import climbDepression from "../../assets/depression copy.png";
+import climbDynoThunder from "../../assets/dyno-thunder copy.png";
+import climbEasyPeasy from "../../assets/easy-peasy copy.png";
+import climbPink from "../../assets/pink copy.png";
+import climbRedFrog from "../../assets/red-frog copy.png";
+import climbSketchy from "../../assets/sketchy copy.png";
+import climbSlab from "../../assets/slab copy.png";
+import climbSloper from "../../assets/sloper copy.png";
+import climbYellowDyno from "../../assets/yellow-dyno copy.png";
+import climbYellowRanger from "../../assets/yellow-ranger copy.png";
+
+const climbingImages = [
+  climbBatHang, climbBigPinch, climbBumpIt, climbDepression,
+  climbDynoThunder, climbEasyPeasy, climbPink, climbRedFrog,
+  climbSketchy, climbSlab, climbSloper, climbYellowDyno, climbYellowRanger,
+];
 
 function Receipt() {
+  const [galleryOpen, setGalleryOpen] = useState(false);
   return (
+    <>
     <div className="receipt-wrapper displace">
       <svg style={{ position: 'absolute', width: 0, height: 0 }}>
         <filter id="displacementFilter1" x="-50%" y="-50%" width="200%" height="200%">
@@ -162,7 +186,7 @@ function Receipt() {
               </tr>
             </thead>
             <tbody>
-              <tr className="receipt-row">
+              <tr className="receipt-row" onClick={() => setGalleryOpen(true)}>
                 <td className="col-num">01</td>
                 <td className="col-name">
                   ROCK CLIMBING.
@@ -299,6 +323,12 @@ function Receipt() {
       </div>
       <div className="receipt-torn-edge"></div>
     </div>
+    <ImageGallery
+      images={climbingImages}
+      isOpen={galleryOpen}
+      onClose={() => setGalleryOpen(false)}
+    />
+    </>
   );
 }
 
