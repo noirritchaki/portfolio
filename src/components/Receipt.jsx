@@ -22,6 +22,13 @@ import climb0963 from "../../assets/IMG_0963 copy.jpg";
 import climb0965 from "../../assets/IMG_0965 copy.jpg";
 import climb0967 from "../../assets/IMG_0967 copy.jpg";
 
+import surf1 from "../../assets/surf1.PNG";
+import surf2 from "../../assets/surf2.jpg";
+import surf3 from "../../assets/surf3.jpg";
+import surf4 from "../../assets/surf4.JPG";
+
+const surfingImages = [surf1, surf2, surf3, surf4];
+
 const climbingImages = [
   climbBatHang, climbBigPinch, climbBumpIt, climbDepression,
   climbDynoThunder, climbEasyPeasy, climbPink, climbRedFrog,
@@ -31,6 +38,7 @@ const climbingImages = [
 
 function Receipt() {
   const [galleryOpen, setGalleryOpen] = useState(false);
+  const [surfGalleryOpen, setSurfGalleryOpen] = useState(false);
   return (
     <>
     <div className="receipt-wrapper displace">
@@ -203,7 +211,7 @@ function Receipt() {
                 </td>
                 <td className="col-year">42</td>
               </tr>
-              <tr className="receipt-row">
+              <tr className="receipt-row" onClick={() => setSurfGalleryOpen(true)}>
                 <td className="col-num">02</td>
                 <td className="col-name">
                   SURFING.
@@ -333,6 +341,11 @@ function Receipt() {
       images={climbingImages}
       isOpen={galleryOpen}
       onClose={() => setGalleryOpen(false)}
+    />
+    <ImageGallery
+      images={surfingImages}
+      isOpen={surfGalleryOpen}
+      onClose={() => setSurfGalleryOpen(false)}
     />
     </>
   );
